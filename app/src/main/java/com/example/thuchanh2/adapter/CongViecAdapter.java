@@ -1,7 +1,6 @@
 package com.example.thuchanh2.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.thuchanh2.R;
-import com.example.thuchanh2.UpdateActivity;
 import com.example.thuchanh2.model.CongViec;
 
 import java.util.List;

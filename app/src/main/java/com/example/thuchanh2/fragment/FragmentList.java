@@ -12,9 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.thuchanh2.MainActivity;
+import com.example.thuchanh2.FormActivity;
 import com.example.thuchanh2.R;
-import com.example.thuchanh2.UpdateActivity;
 import com.example.thuchanh2.adapter.CongViecAdapter;
 import com.example.thuchanh2.database.Database;
 import com.example.thuchanh2.model.CongViec;
@@ -45,7 +44,7 @@ public class FragmentList extends Fragment implements CongViecAdapter.CongViecIt
 
     @Override
     public void onItemClicked(View v, int position) {
-        Intent intent = new Intent(getContext(), UpdateActivity.class);
+        Intent intent = new Intent(getContext(), FormActivity.class);
         CongViec congViec = congViecs.get(position);
         intent.putExtra("congviec", congViec);
         startActivity(intent);

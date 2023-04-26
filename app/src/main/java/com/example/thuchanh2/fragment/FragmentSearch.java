@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -17,15 +15,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.thuchanh2.FormActivity;
 import com.example.thuchanh2.R;
-import com.example.thuchanh2.UpdateActivity;
 import com.example.thuchanh2.adapter.CongViecAdapter;
 import com.example.thuchanh2.database.Database;
 import com.example.thuchanh2.model.CongViec;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class FragmentSearch extends Fragment implements CongViecAdapter.CongViecItemListener {
@@ -75,7 +71,7 @@ public class FragmentSearch extends Fragment implements CongViecAdapter.CongViec
 
     @Override
     public void onItemClicked(View v, int position) {
-        Intent intent = new Intent(getContext(), UpdateActivity.class);
+        Intent intent = new Intent(getContext(), FormActivity.class);
         CongViec congViec = congViecs.get(position);
         intent.putExtra("congviec", congViec);
         startActivity(intent);
